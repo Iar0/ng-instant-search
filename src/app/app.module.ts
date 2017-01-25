@@ -4,17 +4,24 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { AutocompleteComponent } from './autocomplete/autocomplete.component';
+import {AlgoliaService} from "./algolia.service";
+import { InstantSearchComponent } from './instant-search/instant-search.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AutocompleteComponent,
+    InstantSearchComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [
+      AlgoliaService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
