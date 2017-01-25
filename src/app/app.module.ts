@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { AutocompleteComponent } from './autocomplete/autocomplete.component';
 import {AlgoliaService} from "./algolia.service";
 import { InstantSearchComponent } from './instant-search/instant-search.component';
+import { ModularInstantSearchComponent } from './modular-instant-search/modular-instant-search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AutocompleteComponent,
-    InstantSearchComponent
+    InstantSearchComponent,
+    ModularInstantSearchComponent
   ],
   imports: [
     BrowserModule,
