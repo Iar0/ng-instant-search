@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+
 
 @Component({
-  selector: 'app-modular-instant-search',
-  templateUrl: './modular-instant-search.component.html',
-  styleUrls: ['./modular-instant-search.component.css']
+  selector: 'modular-instant-search',
+  template: `
+    <div class="app">
+      <search-box></search-box>
+      <refinement-list></refinement-list>
+      <results></results>
+      <pager></pager>
+    </div>
+  `
 })
-export class ModularInstantSearchComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-}
+export class ModularInstantSearchComponent {}
