@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import {ModularAlgoliaService} from "./modular-algolia.service";
+import {AlgoliasearchHelperService} from "./algoliasearch-helper.service";
 
 @Component({
-    selector: 'refinement-list',
+    selector: 'refinement-list-widget',
     template: `
     <ul class="facet-list" [class.no-results]="facets.length === 0">
       <li 
@@ -19,10 +19,10 @@ import {ModularAlgoliaService} from "./modular-algolia.service";
   `
 })
 
-export class RefinementListComponent {
+export class RefinementListWidgetComponent {
     facets = [];
 
-    constructor(private algoliaService: ModularAlgoliaService) {
+    constructor(private algoliaService: AlgoliasearchHelperService) {
         // The list of available facets is returned by the Algolia API.
         // This list is dynamic and should be updated at each new results.
         // The list depends on the search (es: typing apple the category movie is removed)

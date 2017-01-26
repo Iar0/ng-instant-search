@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import {ModularAlgoliaService} from "./modular-algolia.service";
+import {AlgoliasearchHelperService} from "./algoliasearch-helper.service";
 
 @Component({
-    selector: 'pager',
+    selector: 'pager-widget',
     template: `
     <div class="pager">
       <button class="previous" (click)="prevPage()">Previous</button>
@@ -11,10 +11,10 @@ import {ModularAlgoliaService} from "./modular-algolia.service";
     </div>
   `
 })
-export class PagerComponent {
+export class PagerWidgetComponent {
     currentPage = 0;
 
-    constructor(private algoliaService: ModularAlgoliaService) {
+    constructor(private algoliaService: AlgoliasearchHelperService) {
         this.algoliaService.helper.on('change', () => {
             this.currentPage = algoliaService.helper.getPage();
         });

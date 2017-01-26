@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import {ModularAlgoliaService} from "./modular-algolia.service";
+import {AlgoliasearchHelperService} from "./algoliasearch-helper.service";
 
 @Component({
-    selector: 'results',
+    selector: 'results-widget',
     template: `
     <div class="results">
       <div *ngFor="let hit of hits" 
@@ -14,10 +14,10 @@ import {ModularAlgoliaService} from "./modular-algolia.service";
     </div>
   `
 })
-export class ResultsComponent {
+export class ResultsComponentWidget {
     hits = [];
 
-    constructor(private algoliaService: ModularAlgoliaService) {
+    constructor(private algoliaService: AlgoliasearchHelperService) {
         // subscription
         this.algoliaService.helper.on('result', results => {
             this.hits = results.hits

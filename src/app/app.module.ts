@@ -7,32 +7,22 @@ import { AppComponent } from './app.component';
 import { AutocompleteComponent } from './autocomplete/autocomplete.component';
 import {AlgoliaService} from "./algolia.service";
 import { InstantSearchComponent } from './instant-search/instant-search.component';
-import { ModularInstantSearchComponent } from './modular-instant-search/modular-instant-search.component';
-import {SearchBoxComponent} from "./modular-instant-search/search-box.component";
-import {ModularAlgoliaService} from "./modular-instant-search/modular-algolia.service";
-import {RefinementListComponent} from "./modular-instant-search/refinement-list.component";
-import {PagerComponent} from "./modular-instant-search/pager.component";
-import {ResultsComponent} from "./modular-instant-search/results.component";
+import {AlgoliasearchHelperModule} from "./algoliasearch-helper/algoliasearch-helper.module";
 
 @NgModule({
   declarations: [
     AppComponent,
     AutocompleteComponent,
     InstantSearchComponent,
-    ModularInstantSearchComponent,
-      SearchBoxComponent,
-      RefinementListComponent,
-      PagerComponent,
-      ResultsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+      AlgoliasearchHelperModule
   ],
   providers: [
       AlgoliaService,
-      ModularAlgoliaService
   ],
   bootstrap: [AppComponent]
 })

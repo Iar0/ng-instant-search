@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import {ModularAlgoliaService} from "./modular-algolia.service";
+import {AlgoliasearchHelperService} from "./algoliasearch-helper.service";
 
 @Component({
-    selector: 'search-box',
+    selector: 'search-box-widget',
     template: `
    <div class="form">
      <input 
@@ -16,11 +16,11 @@ import {ModularAlgoliaService} from "./modular-algolia.service";
    `
 })
 
-export class SearchBoxComponent {
+export class SearchBoxWidgetComponent {
     query = '';
     placeholder = 'Search...';
 
-    constructor(private algoliaService: ModularAlgoliaService) {
+    constructor(private algoliaService: AlgoliasearchHelperService) {
         this.algoliaService.helper.setQuery(this.query).search(); //trigger search (method chaining)
     }
 
