@@ -5,3 +5,8 @@
 <h1>Instant Search</h1>
 <app-instant-search></app-instant-search>
 -->
+<a [routerLink]="['/autocomplete']">Autocomplete</a>
+<a style="cursor: pointer" (click)="onNavigate()">Instantsearch</a>
+<a [routerLink]="['/algoliasearch-helper']">Algoliasearch-helper</a>
+
+<router-outlet></router-outlet>

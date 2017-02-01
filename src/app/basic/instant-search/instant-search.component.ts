@@ -3,8 +3,8 @@ import {AlgoliaService} from "../algolia.service";
 
 @Component({
   selector: 'app-instant-search',
-  templateUrl: './instant-search.component.html',
-  styleUrls: ['./instant-search.component.css']
+  templateUrl: 'instant-search.component.html',
+  styleUrls: ['instant-search.component.css']
 })
 export class InstantSearchComponent implements OnInit {
 
