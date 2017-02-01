@@ -4,7 +4,6 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
-import {AlgoliasearchHelperModule} from "./algoliasearch-helper/algoliasearch-helper.module";
 import {BasicModule} from "./basic/basic.module";
 import {routing} from "./app.routing";
 
@@ -15,7 +14,6 @@ import {routing} from "./app.routing";
   imports: [
     BrowserModule,
     HttpModule,
-      AlgoliasearchHelperModule,
       BasicModule,
       routing
   ],

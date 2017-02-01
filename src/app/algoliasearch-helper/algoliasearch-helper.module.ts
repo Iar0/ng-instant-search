@@ -6,10 +6,9 @@ import {RefinementListWidgetComponent} from "./refinement-list-widget.component"
 import {ResultsComponentWidget} from "./results-widget.component";
 import {PagerWidgetComponent} from "./pager-widget.component";
 
-import {CommonModule} from "@angular/common";
 import {AlgoliasearchHelperService} from "./algoliasearch-helper.service";
-import {FormsModule} from "@angular/forms";
-//import {HttpModule} from "@angular/http";
+import {algoliasearchHelperRouting} from "./algoliasearch-helper.routes";
+import {SharedModule} from "../shared/shared.module";
 
 @NgModule({
     declarations: [
@@ -20,9 +19,8 @@ import {FormsModule} from "@angular/forms";
         PagerWidgetComponent
     ],
     imports: [
-        CommonModule,
-        FormsModule, // duplicated
-        //HttpModule
+        SharedModule,
+        algoliasearchHelperRouting
     ],
     providers: [
         AlgoliasearchHelperService
